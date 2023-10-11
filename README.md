@@ -89,10 +89,29 @@ If Node.js version rolls back to 12 after closing the terminal:
 If you face issues with `~/.bashrc`:
 
 - Create the `~/.bashrc` file if it doesn't exist.
+    ```bash
+    touch ~/.bashrc
+    ```
 - Add the NVM sourcing commands to `~/.bashrc`.
+    ```bash
+    nano ~/.bashrc
+    ```
 - Source `~/.bashrc` to apply changes to your current session.
+    ```bash
+    export NVM_DIR="$HOME/.nvm"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+    ```
+- After you've saved the ~/.bashrc file, you need to source it to apply the changes to your current terminal session.
+    ```bash
+    source ~/.bashrc
+    ```
+    
 - Verify NVM installation and set the default Node.js version.
-
+    ```bash
+    nvm --version
+    ```
+    
 These steps should help you upgrade Node.js and address common problems that may arise during the process. Remember to test your Node.js projects to ensure compatibility with the new version.
 
 If you encounter specific issues or need further assistance, please feel free to reach out for help.
